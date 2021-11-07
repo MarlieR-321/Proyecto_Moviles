@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ni.edu.uca.proyecto_final.databinding.ActivityLoginBinding
-import ni.edu.uca.proyecto_final.databinding.ActivityMainBinding
 
 class Login: AppCompatActivity(){
     private lateinit var  binding: ActivityLoginBinding
@@ -14,23 +13,23 @@ class Login: AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        if(/*Usar un binding que lea la cuenta del usuario y en bd leer su rol. Si el rol es niño sera*/){
-            binding.btIniciarLogin.setOnClickListener {
-                verVistaMenuninos()
-            }
-        }
-        if(/*Si el rol delusuario es tutor*/){
-            binding.btIniciarLogin.setOnClickListener {
-                verVistaTutor()
-            }
+        binding.btIniciarLogin.setOnClickListener {
+            /*
+            * if(/*ver que rol tiene la cuenta y es niño*/){
+            *   verVistaMenuninos()
+            * }else if(/*ver rol que tiene la cuenta y es adulto*/){
+            *   verVistaTutor()
+            * }*/
         }
     }
 
     private fun verVistaMenuninos() {
         startActivity(Intent(this,menu_ninos::class.java))
     }
-
+/*
     private fun verVistaTutor() {
         startActivity(Intent(this,/*menu_tutor*/::class.java))
     }
+
+*/
 }
