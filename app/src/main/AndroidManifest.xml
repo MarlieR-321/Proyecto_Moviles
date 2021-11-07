@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Final">
         <activity
+            android:name=".Pantalla_de_Ejercicios"
+            android:exported="true" />
+        <activity
+            android:name=".menu_ninos"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
