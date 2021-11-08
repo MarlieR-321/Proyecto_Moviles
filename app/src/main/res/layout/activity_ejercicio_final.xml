@@ -2,33 +2,70 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnRegresar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ejercicio_Final">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="413dp"
-        android:layout_height="312dp"
+        android:id="@+id/givOsos"
+        android:layout_width="360dp"
+        android:layout_height="270dp"
         android:src="@drawable/felicidades"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.42" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/givGlobos"
+        android:layout_width="209dp"
+        android:layout_height="192dp"
+        android:src="@drawable/globos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/givGlobos2"
+        android:layout_width="209dp"
+        android:layout_height="192dp"
+        android:src="@drawable/globos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/givGlobos3"
+        android:layout_width="209dp"
+        android:layout_height="192dp"
+        android:src="@drawable/globos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.599"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnRegresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="61dp"
         android:text="Ir a Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/givOsos"
+        app:layout_constraintVertical_bias="0.246" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

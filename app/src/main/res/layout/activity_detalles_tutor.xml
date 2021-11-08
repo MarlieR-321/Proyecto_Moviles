@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detalles_Tutor"
+    >
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Datos Generales"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <TableLayout
+        android:id="@+id/tbl_General"
+        android:layout_width="407dp"
+        android:layout_height="70dp"
+        android:background="#FFE2E2"
+        android:stretchColumns="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.055">
+
+        <TableRow android:background="#F39F36">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 1"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:padding="2dp"
+                android:text="Columna 2"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 3"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 4"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="casual"
+        android:text="Datos Específicos"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbl_General" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="407dp"
+        android:layout_height="262dp"
+        android:background="#FFE2E2"
+        android:stretchColumns="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652">
+
+        <TableRow
+            android:background="#F39F36"
+            android:filterTouchesWhenObscured="false">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 1"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:padding="2dp"
+                android:text="Columna 2"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 3"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="Columna 4"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+
+        <TableRow android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+
+        <TableRow android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+
+        <TableRow android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+
+        <TableRow android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="dato_prueba" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="Volver a General"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

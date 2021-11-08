@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Final">
         <activity
+            android:name=".Detalles_Tutor"
+            android:exported="true" />
+        <activity
             android:name=".Ejercicio_Final"
             android:exported="true" />
         <activity
