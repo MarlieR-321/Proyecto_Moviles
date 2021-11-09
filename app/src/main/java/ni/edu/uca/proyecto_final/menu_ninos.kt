@@ -34,7 +34,7 @@ class menu_ninos : AppCompatActivity() {
     }
 
     private fun volverLogin() {
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
+        startActivity(Intent(this,Login::class.java))
     }
 
     private fun ejerCalentamiento() {

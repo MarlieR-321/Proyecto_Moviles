@@ -3,13 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_home">
+
+    <Button
+        android:id="@+id/bt_Crear"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button"
+        android:text="Crea tu cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/tvCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="29dp"
+        android:text="No tienes cuenta?"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
+        app:layout_constraintVertical_bias="0.647" />
 
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="142dp"
         android:layout_height="62dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="88dp"
         android:text="Log in"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
@@ -21,61 +51,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_Usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Usuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
-
-    <EditText
         android:id="@+id/et_Contra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Contraseña"
+        android:textColor="@color/charcoal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Usuario" />
 
-    <Button
-        android:id="@+id/btIniciar_login"
+    <EditText
+        android:id="@+id/et_Usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Usuario"
+        android:textColor="@color/charcoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+    <Button
+        android:id="@+id/btIniciar_login"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/button"
         android:text="INICIAR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Contra" />
 
-    <TextView
-        android:id="@+id/tvCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No tienes cuenta?"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="530dp" />
-
-    <Button
-        android:id="@+id/bt_CrearCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crea tu cuenta"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="581dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

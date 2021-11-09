@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import ni.edu.uca.proyecto_final.databinding.ActivityLoginBinding
 
 class Login: AppCompatActivity(){
-    private lateinit var  binding: ActivityLoginBinding
+    private lateinit var  binding:ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -14,12 +14,15 @@ class Login: AppCompatActivity(){
         setContentView(binding.root)
 
         binding.btIniciarLogin.setOnClickListener {
-            /*
+            /*TODO()
             * if(/*ver que rol tiene la cuenta y es niño*/){
             *   verVistaMenuninos()
             * }else if(/*ver rol que tiene la cuenta y es adulto*/){
             *   verVistaTutor()
             * }*/
+        }
+        binding.btCrear.setOnClickListener {
+            startActivity(Intent(this,Registrar_Cuenta::class.java))
         }
     }
 
