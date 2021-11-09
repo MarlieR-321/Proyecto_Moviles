@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_ninos">
+    tools:context=".menu_ninos"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/tvNombreUsuario"
@@ -17,7 +18,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintVertical_bias="0.505"
+        android:textColor="@color/charcoal"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -29,7 +31,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/charcoal"/>
 
     <Button
         android:id="@+id/btnCalentamiento"
@@ -44,7 +47,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.30" />
+        app:layout_constraintVertical_bias="0.30"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnPiernas"
@@ -59,7 +64,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalentamiento"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnCardio"
@@ -74,7 +81,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPiernas"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnAerobicos"
@@ -89,7 +98,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCardio"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnYoga"
@@ -104,7 +115,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAerobicos"
-        app:layout_constraintVertical_bias="0.04"/>
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <View
         android:id="@+id/divider"
@@ -128,7 +141,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:textColor="@color/charcoal"/>
 
     <Button
         android:id="@+id/btnSalir"
@@ -140,6 +154,8 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.023"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

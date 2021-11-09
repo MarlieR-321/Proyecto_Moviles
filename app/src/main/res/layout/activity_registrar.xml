@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_home">
 
     <TextView
         android:id="@+id/tvRegistrar"
@@ -24,9 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:hint="Nombre real."
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Nombre real."
+        android:textColor="@color/charcoal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +38,14 @@
         android:id="@+id/et_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="Usuario"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Usuario"
+        android:textColor="@color/charcoal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_NombreReal" />
 
@@ -51,39 +55,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="Contraseña"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Contraseña"
+        android:password="true"
+        android:textColor="@color/charcoal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_usuario"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/et_Rol"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/bt_Crear"
+        android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Rol(Tutor/Niño)"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/button"
+        android:text="INICIAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="210dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="50dp"
+        android:entries="@array/roles"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Contraseña" />
-
-    <Button
-        android:id="@+id/bt_Crear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Crear cuenta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Rol"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintTop_toBottomOf="@+id/et_Contraseña"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/charcoal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
