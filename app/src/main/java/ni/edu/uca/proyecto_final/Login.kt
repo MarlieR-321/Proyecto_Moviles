@@ -14,7 +14,8 @@ class Login: AppCompatActivity(){
         setContentView(binding.root)
 
         binding.btIniciarLogin.setOnClickListener {
-            verVistaMenuninos()
+            //verVistaMenuninos()
+            verVistaTutor()
             /*TODO()
             * if(/*ver que rol tiene la cuenta y es niño*/){
             *   verVistaMenuninos()
@@ -30,10 +31,10 @@ class Login: AppCompatActivity(){
     private fun verVistaMenuninos() {
         startActivity(Intent(this,menu_ninos::class.java))
     }
-/*
+
     private fun verVistaTutor() {
-        startActivity(Intent(this,/*menu_tutor*/::class.java))
+        startActivity(Intent(this,General_Tutor::class.java))
     }
 
-*/
+
 }
