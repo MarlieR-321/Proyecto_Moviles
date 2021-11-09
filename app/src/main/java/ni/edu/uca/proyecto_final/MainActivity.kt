@@ -12,5 +12,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.btnIniciar.setOnClickListener {
+            startActivity(Intent(this, Login::class.java))
+        }
+
+        binding.btnAbout.setOnClickListener {
+            startActivity(Intent(this, About::class.java))
+        }
     }
 }
