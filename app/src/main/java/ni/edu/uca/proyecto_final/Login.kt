@@ -23,6 +23,10 @@ class Login: AppCompatActivity(){
             *   verVistaTutor()
             * }*/
         }
+
+        binding.btIniciarLogin2.setOnClickListener {
+            startActivity(Intent(this, menu_ninos::class.java))
+        }
         binding.btCrear.setOnClickListener {
             startActivity(Intent(this,Registrar_Cuenta::class.java))
         }

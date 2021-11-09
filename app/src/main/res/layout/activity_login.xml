@@ -6,35 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_home">
 
-    <Button
-        android:id="@+id/bt_Crear"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/button"
-        android:text="Crea tu cuenta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
-        app:layout_constraintVertical_bias="0.142" />
-
-    <TextView
-        android:id="@+id/tvCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="29dp"
-        android:text="No tienes cuenta?"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_Crear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
-        app:layout_constraintVertical_bias="0.647" />
-
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="142dp"
@@ -84,10 +55,54 @@
         android:id="@+id/btIniciar_login"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/button"
         android:text="INICIAR"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Contra" />
+
+    <TextView
+        android:id="@+id/tvCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="29dp"
+        android:text="No tienes cuenta?"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/bt_Crear"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button"
+        android:text="Crea tu cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciar_login"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <Button
+        android:id="@+id/btIniciar_login2"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button"
+        android:text="Temporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Contra" />
 
