@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Pantalla_de_Ejercicios">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifcalen"
+        android:layout_width="360dp"
+        android:layout_height="270dp"
+        android:src="@drawable/calentar_calentamiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.184" />
 
     <Button
         android:id="@+id/btnVolver"
@@ -16,49 +29,42 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="263dp"
-        android:layout_height="229dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.023"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Haz"
+        android:textColor="@color/charcoal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toBottomOf="@+id/gifcalen"
+        app:layout_constraintVertical_bias="0.154" />
 
     <TextView
         android:id="@+id/tvEjercicios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Numero de Ejercicio"
+        android:textColor="@color/charcoal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toBottomOf="@+id/gifcalen"
+        app:layout_constraintVertical_bias="0.154" />
 
     <TextView
         android:id="@+id/tvTempoRep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Temporizador o Repeticiones"
+        android:textColor="@color/charcoal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -76,6 +82,8 @@
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTempoRep"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.904"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
