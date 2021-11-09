@@ -14,6 +14,7 @@ class Login: AppCompatActivity(){
         setContentView(binding.root)
 
         binding.btIniciarLogin.setOnClickListener {
+            verVistaMenuninos()
             /*TODO()
             * if(/*ver que rol tiene la cuenta y es niño*/){
             *   verVistaMenuninos()

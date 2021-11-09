@@ -14,46 +14,22 @@ class menu_ninos : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSalir.setOnClickListener{
-            volverLogin()
+            startActivity(Intent(this,Login::class.java))
         }
         binding.btnCalentamiento.setOnClickListener{
-            ejerCalentamiento()
+            startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
         }
         binding.btnPiernas.setOnClickListener{
-            ejerPiernas()
+            startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
         }
         binding.btnCardio.setOnClickListener{
-            ejerCardio()
+            startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
         }
         binding.btnAerobicos.setOnClickListener{
-            ejerAerobicos()
+            startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
         }
         binding.btnYoga.setOnClickListener{
-            ejerYoga()
+            startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
         }
-    }
-
-    private fun volverLogin() {
-        startActivity(Intent(this,Login::class.java))
-    }
-
-    private fun ejerCalentamiento() {
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
-    }
-
-    private fun ejerPiernas(){
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
-    }
-
-    private fun ejerCardio() {
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
-    }
-
-    private fun ejerAerobicos(){
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
-    }
-
-    private fun ejerYoga() {
-        startActivity(Intent(this,Pantalla_de_Ejercicios::class.java))
     }
 }
