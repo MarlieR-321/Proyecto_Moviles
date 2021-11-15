@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/tvLogin"
-        android:layout_width="142dp"
+        android:layout_width="wrap_content"
         android:layout_height="62dp"
         android:layout_marginTop="88dp"
-        android:text="Log in"
+        android:text="Iniciar Sesión"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="34sp"
