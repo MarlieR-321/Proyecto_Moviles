@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import ni.edu.uca.proyecto_final.databinding.ActivityAboutBinding
 
 class About : AppCompatActivity() {
-    private lateinit var  binding: ActivityAboutBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityAboutBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_about)
     }
 }
