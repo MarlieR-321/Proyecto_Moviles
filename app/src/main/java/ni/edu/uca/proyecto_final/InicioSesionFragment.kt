@@ -34,7 +34,7 @@ class InicioSesionFragment : Fragment() {
 
         //Tutores
         binding.btIniciarlogin2.setOnClickListener {
-            findNavController().navigate(R.id.menuTutorFragment)
+            findNavController().navigate(R.id.sesionGenFragment)
         }
     }
 }

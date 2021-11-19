@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 
 
 @RequiresApi(Build.VERSION_CODES.P)
-class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,null,DATABASE_VERSION){
+open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,null,DATABASE_VERSION){
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("CREATE TABLE "+ TABLE_USUARIO +"("+

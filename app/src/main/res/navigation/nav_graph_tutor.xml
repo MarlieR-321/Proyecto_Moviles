@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_sesionGenFragment_to_sesionDetFragment"
             app:destination="@id/sesionDetFragment" />
-        <action
-            android:id="@+id/action_sesionGenFragment_to_menuTutorFragment"
-            app:destination="@id/menuTutorFragment" />
     </fragment>
     <fragment
         android:id="@+id/sesionDetFragment"
@@ -55,8 +52,8 @@
             android:id="@+id/action_inicioSesionFragment_to_crearCuentaFragment"
             app:destination="@id/crearCuentaFragment" />
         <action
-            android:id="@+id/action_inicioSesionFragment_to_menuTutorFragment"
-            app:destination="@id/menuTutorFragment" />
+            android:id="@+id/action_inicioSesionFragment_to_sesionGenFragment"
+            app:destination="@id/sesionGenFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuNinosFragment"
@@ -93,14 +90,5 @@
         <action
             android:id="@+id/action_crearCuentaFragment_to_inicioSesionFragment"
             app:destination="@id/inicioSesionFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/menuTutorFragment"
-        android:name="ni.edu.uca.proyecto_final.MenuTutorFragment"
-        android:label="fragment_menu_tutor"
-        tools:layout="@layout/fragment_menu_tutor" >
-        <action
-            android:id="@+id/action_menuTutorFragment_to_sesionGenFragment"
-            app:destination="@id/sesionGenFragment" />
     </fragment>
 </navigation>
