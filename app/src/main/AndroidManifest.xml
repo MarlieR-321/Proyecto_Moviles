@@ -9,30 +9,7 @@
         android:roundIcon="@mipmap/ic_logo_nino_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Final">
-        <activity
-            android:name=".General_Tutor"
-            android:exported="true" />
-        <activity
-            android:name=".Detalles_Tutor"
-            android:exported="true" />
-        <activity
-            android:name=".Ejercicio_Final"
-            android:exported="true" />
-        <activity
-            android:name=".Pantalla_de_Ejercicios"
-            android:exported="true" />
-        <activity
-            android:name=".menu_ninos"
-            android:exported="true" />
-        <activity
-            android:name=".Registrar_Cuenta"
-            android:exported="true" />
-        <activity
-            android:name=".Login"
-            android:exported="true" />
-        <activity
-            android:name=".About"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_tutor"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/sesionGenFragment"
+        android:name="ni.edu.uca.proyecto_final.SesionGenFragment"
+        android:label="fragment_sesion_gen"
+        tools:layout="@layout/fragment_sesion_gen" >
+        <action
+            android:id="@+id/action_sesionGenFragment_to_sesionDetFragment"
+            app:destination="@id/sesionDetFragment" />
+        <action
+            android:id="@+id/action_sesionGenFragment_to_menuTutorFragment"
+            app:destination="@id/menuTutorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sesionDetFragment"
+        android:name="ni.edu.uca.proyecto_final.SesionDetFragment"
+        android:label="fragment_sesion_det"
+        tools:layout="@layout/fragment_sesion_det" >
+        <action
+            android:id="@+id/action_sesionDetFragment_to_sesionGenFragment"
+            app:destination="@id/sesionGenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ni.edu.uca.proyecto_final.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inicioSesionFragment"
+            app:destination="@id/inicioSesionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ni.edu.uca.proyecto_final.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/inicioSesionFragment"
+        android:name="ni.edu.uca.proyecto_final.InicioSesionFragment"
+        android:label="fragment_inicio_sesion"
+        tools:layout="@layout/fragment_inicio_sesion" >
+        <action
+            android:id="@+id/action_inicioSesionFragment_to_menuNinosFragment"
+            app:destination="@id/menuNinosFragment" />
+        <action
+            android:id="@+id/action_inicioSesionFragment_to_crearCuentaFragment"
+            app:destination="@id/crearCuentaFragment" />
+        <action
+            android:id="@+id/action_inicioSesionFragment_to_menuTutorFragment"
+            app:destination="@id/menuTutorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuNinosFragment"
+        android:name="ni.edu.uca.proyecto_final.MenuNinosFragment"
+        android:label="fragment_menu_ninos"
+        tools:layout="@layout/fragment_menu_ninos" >
+        <action
+            android:id="@+id/action_menuNinosFragment_to_ejerciciosFragment"
+            app:destination="@id/ejerciciosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejerciciosFragment"
+        android:name="ni.edu.uca.proyecto_final.EjerciciosFragment"
+        android:label="fragment_ejercicios"
+        tools:layout="@layout/fragment_ejercicios" >
+        <action
+            android:id="@+id/action_ejerciciosFragment_to_ejerciciosFinalFragment"
+            app:destination="@id/ejerciciosFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejerciciosFinalFragment"
+        android:name="ni.edu.uca.proyecto_final.EjerciciosFinalFragment"
+        android:label="fragment_ejercicios_final"
+        tools:layout="@layout/fragment_ejercicios_final" >
+        <action
+            android:id="@+id/action_ejerciciosFinalFragment_to_menuNinosFragment"
+            app:destination="@id/menuNinosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCuentaFragment"
+        android:name="ni.edu.uca.proyecto_final.CrearCuentaFragment"
+        android:label="fragment_crear_cuenta"
+        tools:layout="@layout/fragment_crear_cuenta" >
+        <action
+            android:id="@+id/action_crearCuentaFragment_to_inicioSesionFragment"
+            app:destination="@id/inicioSesionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuTutorFragment"
+        android:name="ni.edu.uca.proyecto_final.MenuTutorFragment"
+        android:label="fragment_menu_tutor"
+        tools:layout="@layout/fragment_menu_tutor" >
+        <action
+            android:id="@+id/action_menuTutorFragment_to_sesionGenFragment"
+            app:destination="@id/sesionGenFragment" />
+    </fragment>
+</navigation>
