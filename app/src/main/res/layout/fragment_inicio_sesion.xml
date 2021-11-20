@@ -22,33 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_Contra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Contraseña"
-        android:textColor="@color/charcoal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Usuario" />
 
     <EditText
         android:id="@+id/et_Usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Usuario"
+        android:hint="Usuario"
         android:textColor="@color/charcoal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
 
@@ -56,11 +42,10 @@
         android:id="@+id/btIniciarLogin"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="88dp"
         android:background="@drawable/button"
         android:text="INICIAR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Contra" />
 
@@ -68,7 +53,6 @@
         android:id="@+id/tvCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginBottom="29dp"
         android:text="No tienes cuenta?"
         android:textAlignment="center"
@@ -76,10 +60,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bt_Crear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btIniciarlogin2"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintTop_toBottomOf="@+id/btIniciarLogin"
+        app:layout_constraintVertical_bias="0.795" />
 
     <Button
         android:id="@+id/bt_Crear"
@@ -90,22 +73,27 @@
         android:text="Crea tu cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btIniciarLogin"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.104" />
 
-    <Button
-        android:id="@+id/btIniciarlogin2"
-        android:layout_width="137dp"
+    <EditText
+        android:id="@+id/et_Contra"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button"
-        android:text="Temporal"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="false"
+        android:textColor="@color/charcoal"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Contra" />
-
+        app:layout_constraintTop_toBottomOf="@+id/et_Usuario"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
