@@ -7,20 +7,19 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import ni.edu.uca.proyecto_final.data.DbHelper
 import ni.edu.uca.proyecto_final.data.entidades.Sesion
+//Clase en la que se manejan las sentencias de esta tabla
 
 @RequiresApi(Build.VERSION_CODES.P)
 class DbSesion(context: Context): DbHelper(context) {
     val dbHelper = DbHelper(context)
 
 
-    fun  mostrarSesion(id:Int):MutableList<Sesion>{
+    fun  mostrarSesion():MutableList<Sesion>{
         val db: SQLiteDatabase = dbHelper!!.writableDatabase
 
-        lateinit var listaSesion: MutableList<Sesion>
-        var sesion:Sesion = Sesion(0,"",0)
-        var cursor:Cursor? =null
-
-        cursor = db.rawQuery("SELECT * FROM $TABLE_SESION WHERE id_usuario = $id",null)
+        var listaSesion = mutableListOf<Sesion>()
+        var sesion = Sesion()
+        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_SESION ORDER BY id_sesion",null)
 
         if(cursor.moveToFirst()){
             do{
@@ -31,9 +30,8 @@ class DbSesion(context: Context): DbHelper(context) {
                 listaSesion?.add(sesion)
             }while (cursor.moveToNext())
             cursor.close()
-        }else{
-            listaSesion?.add(sesion)
         }
         return listaSesion!!
     }
+
 }

@@ -7,14 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.data.adapters.SesionAdapter
 import ni.edu.uca.proyecto_final.data.bd.DbSesion
-import ni.edu.uca.proyecto_final.data.entidades.Sesion
 import ni.edu.uca.proyecto_final.databinding.FragmentSesionGenBinding
 
 class SesionGenFragment : Fragment() {
     private lateinit var binding: FragmentSesionGenBinding
-    private lateinit var lista:ArrayList<Sesion>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,11 +27,16 @@ class SesionGenFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.floatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment)
+        }
+
         binding.rvListaSesion.layoutManager
         var dbsesion:DbSesion = context?.let { DbSesion(it) }!!
 
-        //Todo esto es intento de cargar una lista, ta malo ahorita
-        val adapter = SesionAdapter(dbsesion.mostrarSesion(2))
+        //Todo esto es intento de cargar una lista, no crashea pero no esta probado
+        val adapter = SesionAdapter(dbsesion.mostrarSesion())
 
         binding.rvListaSesion.adapter = adapter
     }
