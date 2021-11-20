@@ -52,6 +52,8 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
 
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Tutor')")
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Protegido')")
+        db?.execSQL("INSERT INTO $TABLE_USUARIO(id_rol,nombre_usuario,nombre_real,contrasena) VALUES (1,'prueba','Prueba','123')")
+        db?.execSQL("INSERT INTO $TABLE_USUARIO(id_rol,nombre_usuario,nombre_real,contrasena) VALUES (2,'coso','Coso','122')")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -61,14 +63,12 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
             db?.execSQL("DROP TABLE $TABLE_CATEGORIAE")
             db?.execSQL("DROP TABLE $TABLE_SESION")
             db?.execSQL("DROP TABLE $TABLE_SESION_DETALLES")
-
-
             onCreate(db)
 
     }
 
     companion object{
-        const val DATABASE_VERSION = 5
+        const val DATABASE_VERSION = 8
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"
