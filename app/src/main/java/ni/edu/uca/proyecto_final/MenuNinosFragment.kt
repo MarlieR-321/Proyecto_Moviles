@@ -22,20 +22,20 @@ class MenuNinosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnAerobicos.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFragment)
-        }
         binding.btnCalentamiento.setOnClickListener {
             findNavController().navigate(R.id.ejerciciosFragment)
         }
-        binding.btnCardio.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFragment)
-        }
         binding.btnPiernas.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFragment)
+            findNavController().navigate(R.id.ejercicio2Fragment)
+        }
+        binding.btnCardio.setOnClickListener {
+            findNavController().navigate(R.id.ejercicio3Fragment)
+        }
+        binding.btnAerobicos.setOnClickListener {
+            findNavController().navigate(R.id.ejercicio4Fragment)
         }
         binding.btnYoga.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFragment)
+            findNavController().navigate(R.id.ejercicio5Fragment)
         }
         binding.btnSalir.setOnClickListener {
             findNavController().navigate(R.id.homeFragment)

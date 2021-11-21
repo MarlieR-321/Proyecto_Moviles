@@ -63,6 +63,18 @@
         <action
             android:id="@+id/action_menuNinosFragment_to_ejerciciosFragment"
             app:destination="@id/ejerciciosFragment" />
+        <action
+            android:id="@+id/action_menuNinosFragment_to_ejercicio2Fragment"
+            app:destination="@id/ejercicio2Fragment" />
+        <action
+            android:id="@+id/action_menuNinosFragment_to_ejercicio3Fragment"
+            app:destination="@id/ejercicio3Fragment" />
+        <action
+            android:id="@+id/action_menuNinosFragment_to_ejercicio4Fragment"
+            app:destination="@id/ejercicio4Fragment" />
+        <action
+            android:id="@+id/action_menuNinosFragment_to_ejercicio5Fragment"
+            app:destination="@id/ejercicio5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/ejerciciosFragment"
@@ -90,5 +102,41 @@
         <action
             android:id="@+id/action_crearCuentaFragment_to_inicioSesionFragment"
             app:destination="@id/inicioSesionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio2Fragment"
+        android:name="ni.edu.uca.proyecto_final.Ejercicio2Fragment"
+        android:label="fragment_ejercicio2"
+        tools:layout="@layout/fragment_ejercicio2" >
+        <action
+            android:id="@+id/action_ejercicio2Fragment_to_ejerciciosFinalFragment"
+            app:destination="@id/ejerciciosFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio3Fragment"
+        android:name="ni.edu.uca.proyecto_final.Ejercicio3Fragment"
+        android:label="fragment_ejercicio3"
+        tools:layout="@layout/fragment_ejercicio3" >
+        <action
+            android:id="@+id/action_ejercicio3Fragment_to_ejerciciosFinalFragment"
+            app:destination="@id/ejerciciosFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio4Fragment"
+        android:name="ni.edu.uca.proyecto_final.Ejercicio4Fragment"
+        android:label="fragment_ejercicio4"
+        tools:layout="@layout/fragment_ejercicio4" >
+        <action
+            android:id="@+id/action_ejercicio4Fragment_to_ejerciciosFinalFragment"
+            app:destination="@id/ejerciciosFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio5Fragment"
+        android:name="ni.edu.uca.proyecto_final.Ejercicio5Fragment"
+        android:label="fragment_ejercicio5"
+        tools:layout="@layout/fragment_ejercicio5" >
+        <action
+            android:id="@+id/action_ejercicio5Fragment_to_ejerciciosFinalFragment"
+            app:destination="@id/ejerciciosFinalFragment" />
     </fragment>
 </navigation>
