@@ -12,7 +12,7 @@ import pl.droidsonroids.gif.GifImageView
 
 class EjerciciosFragment : Fragment() {
     private lateinit var binding:FragmentEjerciciosBinding
-    private var ejeGif: GifImageView? = null
+    var num = 1
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,7 +25,9 @@ class EjerciciosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
+
            // guardarDatos()
+
             cambiarDatos()
 
         }
@@ -40,19 +42,28 @@ class EjerciciosFragment : Fragment() {
     }
 
     private fun cambiarDatos() {
-        /*var textNombEje = binding.tvEjercicios.text.toString()
-        var textRept = binding.tvTempoRep.text.toString()*/
-
-        /*when(num){
-            1 -> {*/
-        binding.gifcalen.setImageResource(R.drawable.brazos2)
-        binding.tvEjercicios.setText("Brazos en horizontal")
-        binding.tvTempoRep.setText("15 repeticiones")
-        //}
-        //}
-    }
-
-    private fun ejercicio(){
-        findNavController().navigate(R.id.ejerciciosFinalFragment)
+        when(num){
+            1 -> {
+                binding.gifcalen.setImageResource(R.drawable.brazos2)
+                binding.tvEjercicios.setText("Brazos en horizontal")
+                binding.tvTempoRep.setText("15 repeticiones")
+                num=num+1
+                }
+            2 -> {
+                binding.gifcalen.setImageResource(R.drawable.calentamiento1)
+                binding.tvEjercicios.setText("Salto estrella")
+                binding.tvTempoRep.setText("10 repeticiones")
+                num=num+1
+                }
+            3 -> {
+                binding.gifcalen.setImageResource(R.drawable.calenetamien2)
+                binding.tvEjercicios.setText("Unsplash")
+                binding.tvTempoRep.setText("15 repeticiones")
+                num=num+1
+                }
+            4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }
+        }
     }
 }
+
+
