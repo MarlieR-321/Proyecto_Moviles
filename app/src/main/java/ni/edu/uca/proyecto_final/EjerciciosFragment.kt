@@ -25,7 +25,7 @@ class EjerciciosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
-            guardarDatos()
+           // guardarDatos()
             cambiarDatos()
 
         }
