@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.databinding.FragmentEjerciciosBinding
+import pl.droidsonroids.gif.GifImageView
 
 
 class EjerciciosFragment : Fragment() {
     private lateinit var binding:FragmentEjerciciosBinding
+    private var ejeGif: GifImageView? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,11 +25,34 @@ class EjerciciosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFinalFragment)
+            guardarDatos()
+            cambiarDatos()
+
         }
 
         binding.btnVolver.setOnClickListener {
             findNavController().navigate(R.id.menuNinosFragment)
         }
+    }
+
+    private fun guardarDatos() {
+        TODO("Not yet implemented")
+    }
+
+    private fun cambiarDatos() {
+        /*var textNombEje = binding.tvEjercicios.text.toString()
+        var textRept = binding.tvTempoRep.text.toString()*/
+
+        /*when(num){
+            1 -> {*/
+        binding.gifcalen.setImageResource(R.drawable.brazos2)
+        binding.tvEjercicios.setText("Brazos en horizontal")
+        binding.tvTempoRep.setText("15 repeticiones")
+        //}
+        //}
+    }
+
+    private fun ejercicio(){
+        findNavController().navigate(R.id.ejerciciosFinalFragment)
     }
 }
