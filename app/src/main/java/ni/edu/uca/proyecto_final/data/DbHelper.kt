@@ -54,6 +54,13 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Protegido')")
         db?.execSQL("INSERT INTO $TABLE_USUARIO(id_rol,nombre_usuario,nombre_real,contrasena) VALUES (1,'prueba','Prueba','123')")
         db?.execSQL("INSERT INTO $TABLE_USUARIO(id_rol,nombre_usuario,nombre_real,contrasena) VALUES (2,'coso','Coso','122')")
+
+
+        db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (1,'Calentamiento','Eleva la temperatura para que los músculos y las articulaciones se pongan en funcionamiento y estén preparados para el esfuerzo posterior.')")
+        db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (2,'Piernas','Quema más calorías y entrenar algunos músculos.')")
+        db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (3,'Cardio','Disminuye el riesgo de enfermedades del corazón y ayuda a quemar grasa')")
+        db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (4,'Aerobicos','Aumentar la resistencia, el estado físico y la fuerza')")
+        db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (5,'Yoga','Conecta el cuerpo, la respiración y la mente.')")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -68,7 +75,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 8
+        const val DATABASE_VERSION = 9
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"

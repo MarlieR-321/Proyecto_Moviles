@@ -1,11 +1,15 @@
 package ni.edu.uca.proyecto_final
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
+import ni.edu.uca.proyecto_final.data.bd.DbEjercicios
+import ni.edu.uca.proyecto_final.data.bd.DbUsuario
 import ni.edu.uca.proyecto_final.databinding.FragmentEjerciciosBinding
 import pl.droidsonroids.gif.GifImageView
 
@@ -13,6 +17,7 @@ import pl.droidsonroids.gif.GifImageView
 class EjerciciosFragment : Fragment() {
     private lateinit var binding:FragmentEjerciciosBinding
     var num = 1
+    val idCateg = 1
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,10 +27,13 @@ class EjerciciosFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
 
+            var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
+            var usuario = dbejercicios.mostrarEjercicios(idCateg)
            // guardarDatos()
 
             cambiarDatos()
