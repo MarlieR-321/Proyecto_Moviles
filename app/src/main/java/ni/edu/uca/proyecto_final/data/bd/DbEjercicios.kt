@@ -16,12 +16,13 @@ class DbEjercicios(context: Context): DbHelper(context) {
     fun  mostrarEjercicios(idCat: Int):MutableList<Ejercicios>{
         val db: SQLiteDatabase = dbHelper!!.writableDatabase
         var listaEjercicios = mutableListOf<Ejercicios>()
-        var ejercicios = Ejercicios()
 
-        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_EJERCICIOS WHERE id_categoria = idCat ",null)
+
+        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_EJERCICIOS WHERE id_categoria = $idCat ",null)
 
         if(cursor.moveToFirst()){
             do{
+                var ejercicios = Ejercicios()
                 ejercicios.id_ejercicio = cursor.getInt(0)
                 ejercicios.id_categoria = cursor.getInt(1)
                 ejercicios.nombre_ejercicio = cursor.getString(2)

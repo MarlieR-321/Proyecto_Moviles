@@ -32,9 +32,7 @@ class EjerciciosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
 
-            //var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
-            //var usuario = dbejercicios.mostrarEjercicios(idCateg)
-           // guardarDatos()
+
             cambiarDatos()
         }
 
@@ -43,24 +41,28 @@ class EjerciciosFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     private fun cambiarDatos() {
+        var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
+        var listaEjercicios = dbejercicios.mostrarEjercicios(idCateg)
+
         when(num){
             1 -> {
                 binding.gifcalen.setImageResource(R.drawable.brazos2)
-                binding.tvEjercicios.text = "Brazos en horizontal"
-                binding.tvTempoRep.text = "15 repeticiones"
+                binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[1].repeticion
                 num += 1
                 }
             2 -> {
                 binding.gifcalen.setImageResource(R.drawable.calentamiento1)
-                binding.tvEjercicios.text = "Salto estrella"
-                binding.tvTempoRep.text = "10 repeticiones"
+                binding.tvEjercicios.text = listaEjercicios[2].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[2].repeticion
                 num += 1
                 }
             3 -> {
                 binding.gifcalen.setImageResource(R.drawable.calenetamien2)
-                binding.tvEjercicios.text = "Unsplash"
-                binding.tvTempoRep.text = "15 repeticiones"
+                binding.tvEjercicios.text = listaEjercicios[3].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[3].repeticion
                 num += 1
                 }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }

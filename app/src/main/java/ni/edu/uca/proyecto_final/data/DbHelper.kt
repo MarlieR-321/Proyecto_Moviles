@@ -61,6 +61,11 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
         db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (3,'Cardio','Disminuye el riesgo de enfermedades del corazón y ayuda a quemar grasa')")
         db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (4,'Aerobicos','Aumentar la resistencia, el estado físico y la fuerza')")
         db?.execSQL("INSERT INTO $TABLE_CATEGORIAE(id_categoria,nombre_cat,descripcion) VALUES (5,'Yoga','Conecta el cuerpo, la respiración y la mente.')")
+
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Brazos','15 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Brazos direccion horizontal','15 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Salto estrella','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Unsplash','15 repeticiones')")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -75,7 +80,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 9
+        const val DATABASE_VERSION = 10
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"
