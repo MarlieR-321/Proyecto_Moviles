@@ -32,12 +32,10 @@ class EjerciciosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnContinuar.setOnClickListener {
 
-            var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
-            var usuario = dbejercicios.mostrarEjercicios(idCateg)
+            //var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
+            //var usuario = dbejercicios.mostrarEjercicios(idCateg)
            // guardarDatos()
-
             cambiarDatos()
-
         }
 
         binding.btnVolver.setOnClickListener {
@@ -45,29 +43,25 @@ class EjerciciosFragment : Fragment() {
         }
     }
 
-    private fun guardarDatos() {
-        TODO("Not yet implemented")
-    }
-
     private fun cambiarDatos() {
         when(num){
             1 -> {
                 binding.gifcalen.setImageResource(R.drawable.brazos2)
-                binding.tvEjercicios.setText("Brazos en horizontal")
-                binding.tvTempoRep.setText("15 repeticiones")
-                num=num+1
+                binding.tvEjercicios.text = "Brazos en horizontal"
+                binding.tvTempoRep.text = "15 repeticiones"
+                num += 1
                 }
             2 -> {
                 binding.gifcalen.setImageResource(R.drawable.calentamiento1)
-                binding.tvEjercicios.setText("Salto estrella")
-                binding.tvTempoRep.setText("10 repeticiones")
-                num=num+1
+                binding.tvEjercicios.text = "Salto estrella"
+                binding.tvTempoRep.text = "10 repeticiones"
+                num += 1
                 }
             3 -> {
                 binding.gifcalen.setImageResource(R.drawable.calenetamien2)
-                binding.tvEjercicios.setText("Unsplash")
-                binding.tvTempoRep.setText("15 repeticiones")
-                num=num+1
+                binding.tvEjercicios.text = "Unsplash"
+                binding.tvTempoRep.text = "15 repeticiones"
+                num += 1
                 }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }
         }

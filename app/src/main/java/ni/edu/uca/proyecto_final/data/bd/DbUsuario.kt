@@ -1,5 +1,6 @@
 package ni.edu.uca.proyecto_final.data.bd
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -31,7 +32,22 @@ class DbUsuario(context:Context): DbHelper(context) {
         return usuario
     }
 
-    fun checkRol(){
+    fun insertarUsuario( nombre_real:String,nombre_Usuario:String, contrasena: String,rol: Int,correo:String){
 
+        try {
+            val db: SQLiteDatabase = dbHelper!!.writableDatabase
+            var values = ContentValues()
+
+            values.put("nombre_real",nombre_real)
+            values.put("nombre_usuario",nombre_Usuario)
+            values.put("correo",correo)
+            values.put("contrasena",contrasena)
+            values.put("id_rol",rol)
+
+            db.insert(TABLE_USUARIO,null,values)
+        }
+        catch (ex:Exception){
+            ex.toString()
+        }
     }
 }
