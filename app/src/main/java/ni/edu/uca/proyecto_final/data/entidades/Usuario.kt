@@ -1,6 +1,6 @@
 package ni.edu.uca.proyecto_final.data.entidades
 
-class Usuario (){
+object Usuario {
     var id_usuario:Int =0
     var nombre_usuario:String =""
     var correo:String =""

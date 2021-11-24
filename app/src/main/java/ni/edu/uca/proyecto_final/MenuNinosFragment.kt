@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import ni.edu.uca.proyecto_final.data.entidades.Usuario
 import ni.edu.uca.proyecto_final.databinding.FragmentMenuNinosBinding
 
 
@@ -22,6 +23,8 @@ class MenuNinosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvNombreUsuario.text = "Hiii $Usuario.nombre_real"
+
         binding.btnCalentamiento.setOnClickListener {
             findNavController().navigate(R.id.ejerciciosFragment)
         }

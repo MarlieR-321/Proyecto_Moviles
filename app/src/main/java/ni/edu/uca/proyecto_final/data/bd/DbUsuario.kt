@@ -15,21 +15,20 @@ class DbUsuario(context:Context): DbHelper(context) {
 
     fun verifyUsuario(name:String,pwd:String):Usuario{
         val db: SQLiteDatabase = dbHelper!!.writableDatabase
-        var usuario = Usuario()
 
         var cursor: Cursor = db.rawQuery("SELECT * FROM $TABLE_USUARIO WHERE nombre_usuario='$name' AND contrasena='$pwd'",null)
 
         if(cursor.moveToFirst()){
-            usuario.id_usuario = cursor.getInt(0)
-            usuario.id_rol = cursor.getInt(1)
-            usuario.nombre_usuario = cursor.getString(2)
-            usuario.nombre_real = cursor.getString(4)
-            usuario.contrasena = cursor.getString(5)
-            return usuario
+            Usuario.id_usuario = cursor.getInt(0)
+            Usuario.id_rol = cursor.getInt(1)
+            Usuario.nombre_usuario = cursor.getString(2)
+            Usuario.nombre_real = cursor.getString(4)
+            Usuario.contrasena = cursor.getString(5)
+            return Usuario
         }else{
-            usuario.id_rol=0
+            Usuario.id_rol=0
         }
-        return usuario
+        return Usuario
     }
 
     fun insertarUsuario( nombre_real:String,nombre_Usuario:String, contrasena: String,rol: Int,correo:String){
