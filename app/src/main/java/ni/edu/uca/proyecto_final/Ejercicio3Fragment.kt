@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.data.bd.DbEjercicios
-import ni.edu.uca.proyecto_final.databinding.FragmentEjerciciosBinding
+import ni.edu.uca.proyecto_final.databinding.FragmentEjercicio3Binding
 
 
 
 class Ejercicio3Fragment : Fragment() {
-    private lateinit var binding:FragmentEjerciciosBinding
+    private lateinit var binding:FragmentEjercicio3Binding
     var num = 0
     val idCateg = 3
 
@@ -28,7 +28,7 @@ class Ejercicio3Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentEjerciciosBinding.inflate(inflater,container,false)
+        binding = FragmentEjercicio3Binding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -42,7 +42,7 @@ class Ejercicio3Fragment : Fragment() {
         binding.btnContinuar.setOnClickListener {
 
 
-            cambiarDatos()
+            cambiarDatos3()
         }
 
         binding.btnVolver.setOnClickListener {
@@ -51,35 +51,35 @@ class Ejercicio3Fragment : Fragment() {
     }
 
     @RequiresApi(Build.VERSION_CODES.P)
-    private fun cambiarDatos() {
+    private fun cambiarDatos3() {
         var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
         var listaEjercicios = dbejercicios.mostrarEjercicios(idCateg)
 
         when(num){
             0 -> {
-                binding.gifcalen.setImageResource(R.drawable.brazos)
-                binding.tvEjercicios.text = listaEjercicios[8].nombre_ejercicio
+                binding.gifcalen.setImageResource(R.drawable.boxeador)
+                binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
                 binding.textView.setText("Haz")
-                binding.tvTempoRep.text = listaEjercicios[8].repeticion
+                binding.tvTempoRep.text = listaEjercicios[0].repeticion
                 binding.btnContinuar.setText("Continuar ejercitandote!")
                 num += 1
             }
             1 -> {
-                binding.gifcalen.setImageResource(R.drawable.brazos2)
-                binding.tvEjercicios.text = listaEjercicios[9].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[9].repeticion
+                binding.gifcalen.setImageResource(R.drawable.cardio_1)
+                binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[1].repeticion
                 num += 1
             }
             2 -> {
-                binding.gifcalen.setImageResource(R.drawable.calentamiento1)
-                binding.tvEjercicios.text = listaEjercicios[10].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[10].repeticion
+                binding.gifcalen.setImageResource(R.drawable.salto_cardio)
+                binding.tvEjercicios.text = listaEjercicios[2].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[2].repeticion
                 num += 1
             }
             3 -> {
-                binding.gifcalen.setImageResource(R.drawable.calenetamien2)
-                binding.tvEjercicios.text = listaEjercicios[11].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[11].repeticion
+                binding.gifcalen.setImageResource(R.drawable.cardio_salto)
+                binding.tvEjercicios.text = listaEjercicios[3].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[3].repeticion
                 num += 1
             }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }

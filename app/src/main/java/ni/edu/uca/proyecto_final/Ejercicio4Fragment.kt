@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.data.bd.DbEjercicios
-import ni.edu.uca.proyecto_final.databinding.FragmentEjerciciosBinding
+import ni.edu.uca.proyecto_final.databinding.FragmentEjercicio4Binding
 
 
 
 class Ejercicio4Fragment : Fragment() {
-    private lateinit var binding:FragmentEjerciciosBinding
+    private lateinit var binding:FragmentEjercicio4Binding
     var num = 0
     val idCateg = 4
 
@@ -28,7 +28,7 @@ class Ejercicio4Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentEjerciciosBinding.inflate(inflater,container,false)
+        binding = FragmentEjercicio4Binding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -57,29 +57,29 @@ class Ejercicio4Fragment : Fragment() {
 
         when(num){
             0 -> {
-                binding.gifcalen.setImageResource(R.drawable.brazos)
-                binding.tvEjercicios.text = listaEjercicios[12].nombre_ejercicio
+                binding.gifcalen.setImageResource(R.drawable.abrazo_rodilla)
+                binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
                 binding.textView.setText("Haz")
-                binding.tvTempoRep.text = listaEjercicios[12].repeticion
+                binding.tvTempoRep.text = listaEjercicios[0].repeticion
                 binding.btnContinuar.setText("Continuar ejercitandote!")
                 num += 1
             }
             1 -> {
-                binding.gifcalen.setImageResource(R.drawable.brazos2)
-                binding.tvEjercicios.text = listaEjercicios[13].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[13].repeticion
+                binding.gifcalen.setImageResource(R.drawable.frog_crunch)
+                binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[1].repeticion
                 num += 1
             }
             2 -> {
-                binding.gifcalen.setImageResource(R.drawable.calentamiento1)
-                binding.tvEjercicios.text = listaEjercicios[14].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[14].repeticion
+                binding.gifcalen.setImageResource(R.drawable.impulso)
+                binding.tvEjercicios.text = listaEjercicios[2].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[2].repeticion
                 num += 1
             }
             3 -> {
-                binding.gifcalen.setImageResource(R.drawable.calenetamien2)
-                binding.tvEjercicios.text = listaEjercicios[15].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[15].repeticion
+                binding.gifcalen.setImageResource(R.drawable.escalador_monta_a)
+                binding.tvEjercicios.text = listaEjercicios[3].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[3].repeticion
                 num += 1
             }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }
