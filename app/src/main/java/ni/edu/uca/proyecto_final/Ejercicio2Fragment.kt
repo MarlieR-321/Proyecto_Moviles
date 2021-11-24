@@ -58,28 +58,28 @@ class Ejercicio2Fragment : Fragment() {
         when(num){
             0 -> {
                 binding.gifcalen.setImageResource(R.drawable.sentadillas)
-                binding.tvEjercicios.text = listaEjercicios[4].nombre_ejercicio
+                binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
                 binding.textView.setText("Haz")
-                binding.tvTempoRep.text = listaEjercicios[4].repeticion
+                binding.tvTempoRep.text = listaEjercicios[0].repeticion
                 binding.btnContinuar.setText("Continuar ejercitandote!")
                 num += 1
             }
             1 -> {
                 binding.gifcalen.setImageResource(R.drawable.tijeras)
-                binding.tvEjercicios.text = listaEjercicios[5].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[5].repeticion
+                binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[1].repeticion
                 num += 1
             }
             2 -> {
                 binding.gifcalen.setImageResource(R.drawable.sentadilla_rebote)
-                binding.tvEjercicios.text = listaEjercicios[6].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[6].repeticion
+                binding.tvEjercicios.text = listaEjercicios[2].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[2].repeticion
                 num += 1
             }
             3 -> {
                 binding.gifcalen.setImageResource(R.drawable.elevacion_piernas)
-                binding.tvEjercicios.text = listaEjercicios[7].nombre_ejercicio
-                binding.tvTempoRep.text = listaEjercicios[7].repeticion
+                binding.tvEjercicios.text = listaEjercicios[3].nombre_ejercicio
+                binding.tvTempoRep.text = listaEjercicios[3].repeticion
                 num += 1
             }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }
