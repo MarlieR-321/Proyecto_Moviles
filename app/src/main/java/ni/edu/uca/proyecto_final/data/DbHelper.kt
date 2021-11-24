@@ -66,6 +66,26 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
         db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Brazos direccion horizontal','15 repeticiones')")
         db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Salto estrella','10 repeticiones')")
         db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (1,'Unsplash','15 repeticiones')")
+
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (2,'Sentadillas','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (2,'Tijeras','15 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (2,'Sentadillas rebote','20 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (2,'Elevacion de piernas','10 repeticiones')")
+
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (3,'Boxeador','30 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (3,'Salto jump-star','15 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (3,'Salto de mano-180','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (3,'Salto una pierna laterales','10 repeticiones')")
+
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (4,'Abrazo rodilla','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (4,'Frog crunch','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (4,'Impulso','10 repeticiones')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (4,'Escalador de montaña','15 repeticiones')")
+
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (5,'Equilibrio estirado','20 segundos')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (5,'Grulla','10 segundos')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (5,'Tringulo','25 segundos')")
+        db?.execSQL("INSERT INTO $TABLE_EJERCICIOS(id_categoria,nombre_ejercicio,repeticion) VALUES (5,'Arco en una pierna','30 segundos')")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -80,7 +100,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 10
+        const val DATABASE_VERSION = 11
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"

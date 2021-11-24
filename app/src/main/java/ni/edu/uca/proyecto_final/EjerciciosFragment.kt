@@ -9,15 +9,20 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.data.bd.DbEjercicios
-import ni.edu.uca.proyecto_final.data.bd.DbUsuario
 import ni.edu.uca.proyecto_final.databinding.FragmentEjerciciosBinding
-import pl.droidsonroids.gif.GifImageView
+
 
 
 class EjerciciosFragment : Fragment() {
     private lateinit var binding:FragmentEjerciciosBinding
-    var num = 1
+    var num = 0
     val idCateg = 1
+
+    /*@RequiresApi(Build.VERSION_CODES.P)
+    var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
+    @RequiresApi(Build.VERSION_CODES.P)
+    var listaEjercicios = dbejercicios.mostrarEjercicios(idCateg)*/
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +35,10 @@ class EjerciciosFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+       // binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
+        //binding.tvTempoRep.text = listaEjercicios[0].repeticion
+
         binding.btnContinuar.setOnClickListener {
 
 
@@ -47,6 +56,14 @@ class EjerciciosFragment : Fragment() {
         var listaEjercicios = dbejercicios.mostrarEjercicios(idCateg)
 
         when(num){
+            0 -> {
+                binding.gifcalen.setImageResource(R.drawable.brazos)
+                binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
+                binding.textView.setText("Haz")
+                binding.tvTempoRep.text = listaEjercicios[0].repeticion
+                binding.btnContinuar.setText("Continuar ejercitandote!")
+                num += 1
+            }
             1 -> {
                 binding.gifcalen.setImageResource(R.drawable.brazos2)
                 binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
