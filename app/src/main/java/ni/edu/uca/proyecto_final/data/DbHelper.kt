@@ -39,7 +39,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
 
         db?.execSQL("CREATE TABLE "+ TABLE_SESION+"("+
                 "id_sesion INTEGER PRIMARY KEY AUTOINCREMENT, "+
-                "fechaSesion DATETIME NOT NULL, "+
+                "fechaSesion VARCHAR NOT NULL, "+
                 "id_usuario INTEGER NOT NULL, " +
                 "FOREIGN KEY (id_usuario) REFERENCES "+TABLE_USUARIO+"(id_usuario) )")
 
@@ -100,7 +100,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 11
+        const val DATABASE_VERSION = 12
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"

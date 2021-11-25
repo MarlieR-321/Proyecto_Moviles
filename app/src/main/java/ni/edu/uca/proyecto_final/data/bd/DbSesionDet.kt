@@ -18,10 +18,11 @@ class DbSesionDet(context: Context): DbHelper(context) {
             var values = ContentValues()
 
             values.put("id_sesion",Id_Sesion)
-            values.put("id_ejercicios",Id_Ejercicio)
+            values.put("id_ejercicio",Id_Ejercicio)
+
             db.insert(TABLE_SESION_DETALLES,null,values)
         } catch(ex:Exception) {
-
+            ex.toString()
         }
 
     }

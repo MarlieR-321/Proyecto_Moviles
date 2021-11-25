@@ -27,12 +27,12 @@ class MenuNinosFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvNombreUsuario.text = "Hiii $Usuario.nombre_real"
+        binding.tvNombreUsuario.text = "Hiii ${Usuario.nombre_real}"
 
         binding.btnCalentamiento.setOnClickListener {
-            findNavController().navigate(R.id.ejerciciosFragment)
             var dbSesion: DbSesion = context?.let { DbSesion(it) }!!
             dbSesion.nuevaSesion()
+            findNavController().navigate(R.id.ejerciciosFragment)
         }
         binding.btnPiernas.setOnClickListener {
             findNavController().navigate(R.id.ejercicio2Fragment)

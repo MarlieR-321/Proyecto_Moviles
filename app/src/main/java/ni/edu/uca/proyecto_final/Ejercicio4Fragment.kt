@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import ni.edu.uca.proyecto_final.data.bd.DbEjercicios
+import ni.edu.uca.proyecto_final.data.bd.DbSesion
+import ni.edu.uca.proyecto_final.data.bd.DbSesionDet
 import ni.edu.uca.proyecto_final.databinding.FragmentEjercicio4Binding
 
 
@@ -62,27 +64,39 @@ class Ejercicio4Fragment : Fragment() {
                 binding.textView.setText("Haz")
                 binding.tvTempoRep.text = listaEjercicios[0].repeticion
                 binding.btnContinuar.setText("Continuar ejercitandote!")
+                guardar(listaEjercicios[0].id_ejercicio)
                 num += 1
             }
             1 -> {
                 binding.gifcalen.setImageResource(R.drawable.frog_crunch)
                 binding.tvEjercicios.text = listaEjercicios[1].nombre_ejercicio
                 binding.tvTempoRep.text = listaEjercicios[1].repeticion
+                guardar(listaEjercicios[1].id_ejercicio)
                 num += 1
             }
             2 -> {
                 binding.gifcalen.setImageResource(R.drawable.impulso)
                 binding.tvEjercicios.text = listaEjercicios[2].nombre_ejercicio
                 binding.tvTempoRep.text = listaEjercicios[2].repeticion
+                guardar(listaEjercicios[2].id_ejercicio)
                 num += 1
             }
             3 -> {
                 binding.gifcalen.setImageResource(R.drawable.escalador_monta_a)
                 binding.tvEjercicios.text = listaEjercicios[3].nombre_ejercicio
                 binding.tvTempoRep.text = listaEjercicios[3].repeticion
+                guardar(listaEjercicios[3].id_ejercicio)
                 num += 1
             }
             4 -> { findNavController().navigate(R.id.ejerciciosFinalFragment) }
         }
+    }
+    @RequiresApi(Build.VERSION_CODES.P)
+    fun guardar(Id_ejercicio:Int){
+        var dbSesion: DbSesion = context?.let { DbSesion(it) }!!
+        var Id = dbSesion.getId()
+
+        var dbSesionDet: DbSesionDet = context?.let { DbSesionDet(it) }!!
+        dbSesionDet.InsertarDetalle(Id, Id_ejercicio)
     }
 }

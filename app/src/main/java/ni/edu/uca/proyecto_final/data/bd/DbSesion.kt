@@ -43,26 +43,29 @@ class DbSesion(context: Context): DbHelper(context) {
     fun nuevaSesion(){
         val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
         val currentDate = sdf.format(Date())
-        Toast.makeText(null,currentDate,Toast.LENGTH_SHORT).show()
+
+//        Toast.makeText(null,currentDate.toString(),Toast.LENGTH_SHORT).show()
         try{
             val db: SQLiteDatabase = dbHelper!!.writableDatabase
             var values = ContentValues()
 
-            values.put("fechaSesion",currentDate)
+            values.put("fechaSesion",currentDate.toString())
             values.put("id_usuario", Usuario.id_usuario)
+
             db.insert(TABLE_SESION,null,values)
         } catch(ex:Exception) {
-
+            ex.toString()
         }
 
     }
 
     fun getId():Int{
         val db: SQLiteDatabase = dbHelper!!.writableDatabase
-        var cursor:Cursor = db.rawQuery("SELECT  id_sesion FROM $TABLE_SESION ORDER BY id_sesion desc LIMIT 1",null)
-        val Id = cursor.getInt(0)
+        var cursor:Cursor = db.rawQuery("SELECT id_sesion FROM $TABLE_SESION ORDER BY id_sesion desc LIMIT 1",null)
+        cursor.moveToFirst()
+        val id = cursor.getInt(0)
         cursor.close()
-        return Id
+        return id
     }
 
 }
