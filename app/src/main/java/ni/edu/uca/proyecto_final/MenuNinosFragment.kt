@@ -51,7 +51,6 @@ class MenuNinosFragment : Fragment() {
             findNavController().navigate(R.id.ejercicio5Fragment)
         }
         binding.btnSalir.setOnClickListener {
-            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.homeFragment)
         }
 

@@ -24,11 +24,12 @@ class DbSesion(context: Context): DbHelper(context) {
         val db: SQLiteDatabase = dbHelper!!.writableDatabase
 
         var listaSesion = mutableListOf<Sesion>()
-        var sesion = Sesion()
-        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_SESION ORDER BY id_sesion",null)
+
+        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_SESION ORDER BY id_sesion DESC",null)
 
         if(cursor.moveToFirst()){
             do{
+                val sesion = Sesion()
                 sesion.id_sesion = cursor.getInt(0)
                 sesion.fecha_sesion = cursor.getString(1)
                 sesion.id_usuario = cursor.getInt(2)

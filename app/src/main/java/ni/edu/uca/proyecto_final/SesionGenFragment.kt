@@ -40,7 +40,6 @@ class SesionGenFragment : Fragment() {
 
         //Todo esto es intento de cargar una lista, no crashea pero no esta probado
         val adapter = SesionAdapter(dbsesion.mostrarSesion())
-
         binding.rvListaSesion.adapter = adapter
     }
 

@@ -50,6 +50,8 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
                 "FOREIGN KEY (id_sesion) REFERENCES "+TABLE_SESION+"(id_sesion), "+
                 "FOREIGN KEY (id_ejercicio) REFERENCES "+TABLE_EJERCICIOS+"(id_ejercicio) )")
 
+        db?.execSQL("Create view $VIEW_SESION as Select s.id_sesion, s.fechaSesion,s.id_usuario, u.nombre_usuario FROM $TABLE_SESION s INNER JOIN $TABLE_USUARIO u on (u.id_Usuario = s.id_usuario)")
+
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Tutor')")
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Protegido')")
         db?.execSQL("INSERT INTO $TABLE_USUARIO(id_rol,nombre_usuario,nombre_real,contrasena) VALUES (1,'prueba','Prueba','123')")
@@ -100,7 +102,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 12
+        const val DATABASE_VERSION = 13
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"
@@ -108,5 +110,6 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
         const val TABLE_CATEGORIAE = "CategoriaEjercicio"
         const val TABLE_SESION = "Sesion"
         const val TABLE_SESION_DETALLES = "Sesion_Detalles"
+        const val VIEW_SESION = "vw_Sesion"
     }
 }
