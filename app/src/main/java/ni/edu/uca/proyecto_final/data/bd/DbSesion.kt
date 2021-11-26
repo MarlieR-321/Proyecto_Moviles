@@ -17,7 +17,7 @@ import java.util.*
 
 @RequiresApi(Build.VERSION_CODES.P)
 class DbSesion(context: Context): DbHelper(context) {
-    val dbHelper = DbHelper(context)
+    private val dbHelper = DbHelper(context)
 
 
     fun  mostrarSesion():MutableList<Sesion>{

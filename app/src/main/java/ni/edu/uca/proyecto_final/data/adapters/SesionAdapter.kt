@@ -13,8 +13,8 @@ class SesionAdapter(listaSesion: MutableList<Sesion>): RecyclerView.Adapter<Sesi
     val listaSesion = listaSesion
 
     class SesionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvFecha:TextView = itemView.findViewById(R.id.item_nae)
-
+        val tvFecha:TextView = itemView.findViewById(R.id.item_date)
+        val tvUser:TextView = itemView.findViewById(R.id.item_user)
     }
 
     override fun onCreateViewHolder(
@@ -27,7 +27,7 @@ class SesionAdapter(listaSesion: MutableList<Sesion>): RecyclerView.Adapter<Sesi
 
     override fun onBindViewHolder(holder: SesionViewHolder, position: Int) {
         holder.tvFecha.text = listaSesion[position].fecha_sesion
-
+        holder.tvUser.text = listaSesion[position].id_usuario.toString()
     }
 
     override fun getItemCount(): Int {

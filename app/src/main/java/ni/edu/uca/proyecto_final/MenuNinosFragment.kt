@@ -28,25 +28,30 @@ class MenuNinosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.tvNombreUsuario.text = "Hiii ${Usuario.nombre_real}"
+        var dbSesion: DbSesion = context?.let { DbSesion(it) }!!
 
         binding.btnCalentamiento.setOnClickListener {
-            var dbSesion: DbSesion = context?.let { DbSesion(it) }!!
             dbSesion.nuevaSesion()
             findNavController().navigate(R.id.ejerciciosFragment)
         }
         binding.btnPiernas.setOnClickListener {
+            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.ejercicio2Fragment)
         }
         binding.btnCardio.setOnClickListener {
+            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.ejercicio3Fragment)
         }
         binding.btnAerobicos.setOnClickListener {
+            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.ejercicio4Fragment)
         }
         binding.btnYoga.setOnClickListener {
+            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.ejercicio5Fragment)
         }
         binding.btnSalir.setOnClickListener {
+            dbSesion.nuevaSesion()
             findNavController().navigate(R.id.homeFragment)
         }
 

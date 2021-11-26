@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import ni.edu.uca.proyecto_final.data.adapters.SesionAdapter
 import ni.edu.uca.proyecto_final.data.bd.DbSesion
 import ni.edu.uca.proyecto_final.databinding.FragmentSesionGenBinding
@@ -32,7 +35,7 @@ class SesionGenFragment : Fragment() {
             findNavController().navigate(R.id.homeFragment)
         }
 
-        binding.rvListaSesion.layoutManager
+        binding.rvListaSesion.layoutManager = LinearLayoutManager(context)
         var dbsesion:DbSesion = context?.let { DbSesion(it) }!!
 
         //Todo esto es intento de cargar una lista, no crashea pero no esta probado
