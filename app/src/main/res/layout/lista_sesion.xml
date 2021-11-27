@@ -17,17 +17,18 @@
             android:text="..."
             android:textSize="18dp"
             android:textColor="@color/charcoal"
-            android:clickable="true"/>
+            />
 
         <TextView
             android:id="@+id/item_user"
             style="@style/Widget.KidA.Header.NombreNino"
             android:layout_width="fill_parent"
-            android:layout_height="56dp"
+            android:layout_height="60dp"
+            android:clickable="true"
             android:text="..."
-            android:textSize="18dp"
             android:textColor="@color/charcoal"
-            android:clickable="true"/>
+            android:textSize="18dp" />
+
     </LinearLayout>
 
 </LinearLayout>

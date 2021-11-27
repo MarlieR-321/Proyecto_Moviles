@@ -39,7 +39,10 @@ class SesionGenFragment : Fragment() {
         var dbsesion:DbSesion = context?.let { DbSesion(it) }!!
 
         //Todo esto es intento de cargar una lista, no crashea pero no esta probado
-        val adapter = SesionAdapter(dbsesion.mostrarSesion())
+        val adapter = SesionAdapter(dbsesion.mostrarSesion()){
+            this.findNavController().navigate(R.id.sesionDetFragment)
+        }
+
         binding.rvListaSesion.adapter = adapter
     }
 

@@ -1,15 +1,20 @@
 package ni.edu.uca.proyecto_final.data.adapters
 
+import android.content.ClipData
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ni.edu.uca.proyecto_final.R
 import ni.edu.uca.proyecto_final.data.adapters.SesionAdapter.*
 import ni.edu.uca.proyecto_final.data.entidades.Sesion
 
-class SesionAdapter(listaSesion: MutableList<Sesion>): RecyclerView.Adapter<SesionViewHolder>() {
+class SesionAdapter(listaSesion: MutableList<Sesion>,private val onItemClicked: (Sesion) -> Unit) :   ListAdapter<Sesion, SesionViewHolder>(DiffCallback) {
     val listaSesion = listaSesion
 
     class SesionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,12 +31,32 @@ class SesionAdapter(listaSesion: MutableList<Sesion>): RecyclerView.Adapter<Sesi
     }
 
     override fun onBindViewHolder(holder: SesionViewHolder, position: Int) {
-        holder.tvFecha.text = listaSesion[position].fecha_sesion
-        holder.tvUser.text = listaSesion[position].id_usuario.toString()
+        val current =listaSesion[position]
+        holder.tvFecha.text = current.fecha_sesion
+        holder.tvUser.text = current.id_usuario.toString()
+
+        holder.tvUser.setOnClickListener {
+            onItemClicked(current)
+        }
+
+        holder.tvFecha.setOnClickListener {
+            onItemClicked(current)
+        }
     }
 
     override fun getItemCount(): Int {
         return listaSesion.size
+    }
+    companion object {
+        private val DiffCallback = object : DiffUtil.ItemCallback<Sesion>() {
+            override fun areItemsTheSame(oldItem: Sesion, newItem: Sesion): Boolean {
+                return oldItem === newItem
+            }
+
+            override fun areContentsTheSame(oldItem: Sesion, newItem: Sesion): Boolean {
+                return oldItem.id_sesion == newItem.id_sesion
+            }
+        }
     }
 
 }
