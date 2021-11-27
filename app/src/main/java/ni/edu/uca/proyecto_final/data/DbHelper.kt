@@ -51,6 +51,8 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
                 "FOREIGN KEY (id_ejercicio) REFERENCES "+TABLE_EJERCICIOS+"(id_ejercicio) )")
 
         db?.execSQL("Create view $VIEW_SESION as Select s.id_sesion, s.fechaSesion,s.id_usuario, u.nombre_usuario FROM $TABLE_SESION s INNER JOIN $TABLE_USUARIO u on (u.id_Usuario = s.id_usuario)")
+        db?.execSQL("Create view $VIEW_SESION_DET as Select s.id_sesion_det, s.id_sesion,s.id_ejercicio, e.nombre_ejercicio,e.repeticion FROM $TABLE_SESION_DETALLES s INNER JOIN $TABLE_EJERCICIOS e on (e.id_ejercicio = s.id_ejercicio)")
+
 
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Tutor')")
         db?.execSQL("INSERT INTO $TABLE_ROL(nombre_rol) VALUES ('Protegido')")
@@ -91,6 +93,8 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+//            db?.execSQL("DROP VIEW $VIEW_SESION_DET")
+            db?.execSQL("DROP VIEW $VIEW_SESION")
             db?.execSQL("DROP TABLE $TABLE_USUARIO")
             db?.execSQL("DROP TABLE $TABLE_ROL")
             db?.execSQL("DROP TABLE $TABLE_EJERCICIOS")
@@ -102,7 +106,7 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
     }
 
     companion object{
-        const val DATABASE_VERSION = 13
+        const val DATABASE_VERSION = 15
         const val DATABASE_NOMBRE = "kidA_db"
         const val TABLE_USUARIO = "Usuario"
         const val TABLE_ROL = "Rol"
@@ -111,5 +115,6 @@ open class DbHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NOMBRE,
         const val TABLE_SESION = "Sesion"
         const val TABLE_SESION_DETALLES = "Sesion_Detalles"
         const val VIEW_SESION = "vw_Sesion"
+        const val VIEW_SESION_DET = "vw_Sesion_Det"
     }
 }
