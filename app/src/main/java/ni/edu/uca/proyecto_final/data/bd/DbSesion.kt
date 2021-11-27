@@ -25,7 +25,7 @@ class DbSesion(context: Context): DbHelper(context) {
 
         var listaSesion = mutableListOf<Sesion>()
 
-        var cursor:Cursor = db.rawQuery("SELECT * FROM $TABLE_SESION ORDER BY id_sesion DESC",null)
+        var cursor:Cursor = db.rawQuery("SELECT * FROM $VIEW_SESION ORDER BY id_sesion DESC",null)
 
         if(cursor.moveToFirst()){
             do{
@@ -33,6 +33,7 @@ class DbSesion(context: Context): DbHelper(context) {
                 sesion.id_sesion = cursor.getInt(0)
                 sesion.fecha_sesion = cursor.getString(1)
                 sesion.id_usuario = cursor.getInt(2)
+                sesion.nombre_usuario = cursor.getString(3)
 
                 listaSesion?.add(sesion)
             }while (cursor.moveToNext())
@@ -42,15 +43,14 @@ class DbSesion(context: Context): DbHelper(context) {
     }
 
     fun nuevaSesion(){
-        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
-        val currentDate = sdf.format(Date())
+        val now:Calendar = Calendar.getInstance()
+        val datetime:String = "${now.get(Calendar.DATE)}/${now.get(Calendar.MONTH)}/${now.get(Calendar.YEAR)} - ${now.get(Calendar.HOUR_OF_DAY)}:${now.get(Calendar.MINUTE)}:${now.get(Calendar.SECOND)}"
 
-//        Toast.makeText(null,currentDate.toString(),Toast.LENGTH_SHORT).show()
         try{
             val db: SQLiteDatabase = dbHelper!!.writableDatabase
             var values = ContentValues()
 
-            values.put("fechaSesion",currentDate.toString())
+            values.put("fechaSesion",datetime)
             values.put("id_usuario", Usuario.id_usuario)
 
             db.insert(TABLE_SESION,null,values)

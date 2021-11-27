@@ -32,16 +32,16 @@ class SesionAdapter(listaSesion: MutableList<Sesion>,private val onItemClicked: 
 
     override fun onBindViewHolder(holder: SesionViewHolder, position: Int) {
         val current =listaSesion[position]
-        holder.tvFecha.text = current.fecha_sesion
-        holder.tvUser.text = current.id_usuario.toString()
-
         holder.tvUser.setOnClickListener {
             onItemClicked(current)
         }
 
-        holder.tvFecha.setOnClickListener {
+        holder.itemView.setOnClickListener {
             onItemClicked(current)
         }
+
+        holder.tvFecha.text = current.fecha_sesion
+        holder.tvUser.text = current.nombre_usuario
     }
 
     override fun getItemCount(): Int {

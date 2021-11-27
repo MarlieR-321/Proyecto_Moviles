@@ -10,7 +10,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/item_date"
+            android:id="@+id/item_ejercicio"
             style="@style/Widget.KidA.Header.NombreNino"
             android:layout_width="217dp"
             android:layout_height="56dp"
@@ -20,7 +20,7 @@
             />
 
         <TextView
-            android:id="@+id/item_user"
+            android:id="@+id/item_rep"
             style="@style/Widget.KidA.Header.NombreNino"
             android:layout_width="191dp"
             android:layout_height="60dp"
