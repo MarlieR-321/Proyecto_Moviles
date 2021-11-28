@@ -16,12 +16,14 @@
         android:layout_marginHorizontal="@dimen/margin"
         android:layout_marginStart="@dimen/margin_between_elements"
         android:text="Ejercicio"
+        android:textAlignment="center"
+        android:textColor="@color/charcoal"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/item_price"
         app:layout_constraintHorizontal_weight="1.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/charcoal"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_price"
@@ -31,12 +33,14 @@
         android:layout_below="@+id/item_name"
         android:layout_marginStart="@dimen/margin_between_elements"
         android:text="Repeticiones"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toEndOf="@+id/item_name"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/charcoal"/>
+        android:textAlignment="center"
+        android:textColor="@color/charcoal"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
     <View
         android:id="@+id/divider"
