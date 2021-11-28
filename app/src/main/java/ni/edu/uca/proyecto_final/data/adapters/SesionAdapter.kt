@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ni.edu.uca.proyecto_final.R
 import ni.edu.uca.proyecto_final.data.adapters.SesionAdapter.*
 import ni.edu.uca.proyecto_final.data.entidades.Sesion
+import ni.edu.uca.proyecto_final.data.entidades.SesionObj
 
 class SesionAdapter(listaSesion: MutableList<Sesion>,private val onItemClicked: (Sesion) -> Unit) :   ListAdapter<Sesion, SesionViewHolder>(DiffCallback) {
     val listaSesion = listaSesion
@@ -33,11 +34,13 @@ class SesionAdapter(listaSesion: MutableList<Sesion>,private val onItemClicked: 
     override fun onBindViewHolder(holder: SesionViewHolder, position: Int) {
         val current =listaSesion[position]
         holder.tvUser.setOnClickListener {
+            SesionObj.Id_Sesion=current.id_sesion
             onItemClicked(current)
         }
 
         holder.itemView.setOnClickListener {
             onItemClicked(current)
+            SesionObj.Id_Sesion=current.id_sesion
         }
 
         holder.tvFecha.text = current.fecha_sesion
