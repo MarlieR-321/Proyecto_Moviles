@@ -8,7 +8,6 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import ni.edu.uca.proyecto_final.data.DbHelper
 import ni.edu.uca.proyecto_final.data.entidades.Sesion_Detalles
-import ni.edu.uca.proyecto_final.data.entidades.Usuario
 
 @RequiresApi(Build.VERSION_CODES.P)
 class DbSesionDet(context: Context): DbHelper(context) {

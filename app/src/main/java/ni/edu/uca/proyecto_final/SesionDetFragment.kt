@@ -6,15 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.LinearLayout
 import androidx.annotation.RequiresApi
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ni.edu.uca.proyecto_final.data.adapters.SesionDetAdapter
-import ni.edu.uca.proyecto_final.data.bd.DbSesion
 import ni.edu.uca.proyecto_final.data.bd.DbSesionDet
 import ni.edu.uca.proyecto_final.data.entidades.SesionObj
-import ni.edu.uca.proyecto_final.databinding.ActivityMainBinding
 import ni.edu.uca.proyecto_final.databinding.FragmentSesionDetBinding
 
 
@@ -32,6 +29,10 @@ class SesionDetFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.floatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.sesionGenFragment)
+        }
+
         binding.recyclerView.layoutManager=LinearLayoutManager(context)
         var dbSesion:DbSesionDet=context?.let { DbSesionDet(it) }!!
         val Adapter= SesionDetAdapter(dbSesion.MostrarDetalle(SesionObj.Id_Sesion))

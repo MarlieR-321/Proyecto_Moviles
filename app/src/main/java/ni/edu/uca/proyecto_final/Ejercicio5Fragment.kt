@@ -20,11 +20,6 @@ class Ejercicio5Fragment : Fragment() {
     var num = 0
     val idCateg = 5
 
-    /*RequiresApi(Build.VERSION_CODES.P)
-    var dbejercicios: DbEjercicios = context?.let { DbEjercicios(it) }!!
-    @RequiresApi(Build.VERSION_CODES.P)
-    var listaEjercicios = dbejercicios.mostrarEjercicios(idCateg)*/
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,12 +33,7 @@ class Ejercicio5Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //binding.tvEjercicios.text = listaEjercicios[0].nombre_ejercicio
-        //binding.tvTempoRep.text = listaEjercicios[0].repeticion
-
         binding.btnContinuar.setOnClickListener {
-
-
             cambiarDatos()
         }
 

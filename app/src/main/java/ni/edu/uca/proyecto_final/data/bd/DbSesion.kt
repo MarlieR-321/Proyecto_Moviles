@@ -5,12 +5,10 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.os.Build
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import ni.edu.uca.proyecto_final.data.DbHelper
 import ni.edu.uca.proyecto_final.data.entidades.Sesion
 import ni.edu.uca.proyecto_final.data.entidades.Usuario
-import java.text.SimpleDateFormat
 import java.util.*
 
 //Clase en la que se manejan las sentencias de esta tabla
